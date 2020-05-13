@@ -1,30 +1,29 @@
 import React from 'react';
-import logo from './assets/images/logo.svg';
 import './assets/css/App.css';
-function HolaMundo(nombre) {
-  var presentacion = 
-  <h2>React, realizado por: {nombre}</h2>
-  return presentacion;
-}
+//importar componentes
+
+import Header from './components/Header';
+import Slider from './components/Slider';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
+import Peliculas from './components/Peliculas';
+
 function App() {
-  var nombre = 'José María Ruíz Domínguez';
- 
+  var buttonString = "Ir al Blog";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         {HolaMundo(nombre)}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Slider
+        title="Frameworks por: Jose María Ruíz Domínguez"
+        btn={buttonString}
+      />
+      <div className="center">
+        <Peliculas />
+        <Sidebar />
+        <div className="clearfix"></div>
+      </div>
+      <Footer />
+
     </div>
   );
 }
