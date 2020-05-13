@@ -10,6 +10,10 @@ class MiComponente extends Component {
         };
         return (
             <div>
+                {
+                    this.props.saludo &&
+                    <h2>{this.props.saludo}</h2>
+                }
                 <h1>Como hacer un:  {receta.nombre}</h1>
                 <h2>Calorias: {receta.calorias}</h2>
                 <ol>
