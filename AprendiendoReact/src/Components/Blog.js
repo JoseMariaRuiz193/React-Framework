@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import Slider from './Slider';
 import Sidebar from './Sidebar';
-
+import Articles from './Articles';
 
 
 
 class Blog extends Component {
 
     render() {
+
+
 
         return (
             <div id="blog">
@@ -18,9 +20,11 @@ class Blog extends Component {
                 <div className="center">
                     <div id="content">
 
+                        <Articles />
+
                     </div>
                     <Sidebar
-                    blog="true"
+                        blog="true"
                     />
                 </div>
 

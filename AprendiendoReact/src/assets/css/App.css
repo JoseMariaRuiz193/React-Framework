@@ -45,11 +45,11 @@ body {
 
 @keyframes girar {
   from {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -90,7 +90,7 @@ body {
   color: #3cb2d3;
 }
 
-.active{
+.active {
   border-bottom: 2px solid #61dafb;
 }
 
@@ -212,6 +212,32 @@ body {
   background: black;
 }
 
+.btn-warning {
+  background: #4D9BE3;
+  color: white !important;
+  height: 40px;
+  width: 140px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 5px;
+  
+}
+
+.btn-danger {
+  background: #4D9BE3;
+  color: white !important;
+  height: 40px;
+  width: 140px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.btn-warning:hover,
+.btn-danger:hover {
+  transition: all 300ms;
+  opacity: 0.8;
+}
+
 input[type="submit"] {
   background: #4D9BE3;
 }
@@ -235,7 +261,8 @@ input[type="submit"]:hover {
 }
 
 input[type="text"],
-textarea {
+textarea,
+input[type="file"] {
   width: 100%;
   min-height: 30px;
   height: 30px;
@@ -244,6 +271,7 @@ textarea {
   margin-bottom: 5px;
   transition: 300ms all;
 }
+
 
 input[type="text"]:focus,
 textarea:focus {
@@ -258,6 +286,9 @@ textarea {
   min-height: 150px;
   max-height: 300px;
 
+}
+input[type="submit"]{
+  margin-top: 15px;
 }
 
 .radiobuttons {
@@ -360,107 +391,115 @@ textarea {
 
   /* se ejecutaran estos estilos*/
   .center {
-      width: 85%;
+    width: 85%;
   }
 
 }
 
 @media (max-width:990px) {
   .center {
-      width: 95%;
+    width: 95%;
   }
 
   #menu ul {
-      width: auto;
+    width: auto;
   }
 }
 
 @media (max-width:834px) {
   .btn-white {
-      float: none;
-      width: 100px;
-      margin: 0px auto;
-      margin-top: 0px;
+    float: none;
+    width: 100px;
+    margin: 0px auto;
+    margin-top: 0px;
   }
 }
 
 @media (max-width:817px) {
   #logo {
-      float: none;
-      width: 240px;
-      margin: 0px auto;
-      margin-top: 20px;
+    float: none;
+    width: 240px;
+    margin: 0px auto;
+    margin-top: 20px;
   }
 
   #menu,
   #menu ul {
-      clear: both;
-      float: none;
-      width: 100%;
-      margin: 0px;
-      padding: 0px;
-      line-height: 43px;
+    clear: both;
+    float: none;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    line-height: 43px;
   }
 
   #content {
-      float: none;
-      width: 60%;
-      margin: 0px auto;
-      margin-bottom: 50px;
+    float: none;
+    width: 60%;
+    margin: 0px auto;
+    margin-bottom: 50px;
   }
-  #sidebar{
-      float: none;
-      width: 60%;
-      margin: 0px auto;
-      margin-bottom: 50px;
+
+  #sidebar {
+    float: none;
+    width: 60%;
+    margin: 0px auto;
+    margin-bottom: 50px;
   }
 
   slider h1 {
-      padding-top: 115px;
-      font-size: 25px;
+    padding-top: 115px;
+    font-size: 25px;
   }
-  .mid-form{
-      width: 90%;
+
+  .mid-form {
+    width: 90%;
   }
 }
 
 @media (max-width:416px) {
   .btn-white {
-      float: none;
-      width: 100px;
-      margin: 0px auto;
-      margin-top: 0px;
+    float: none;
+    width: 100px;
+    margin: 0px auto;
+    margin-top: 0px;
   }
 }
 
 @media (max-width:371px) {
-#header{
+  #header {
     min-height: 130px;
     overflow: hidden;
-}
+  }
 
-#menu,
-#menu ul{
+  #menu,
+  #menu ul {
     line-height: 50px;
-}
-#menu ul li{
-   margin-left: 7px;
-   margin-right: 7px;
-}
-#slider{
+  }
+
+  #menu ul li {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+
+  #slider {
     height: 180px;
-}
-#slider h1{
+  }
+
+  #slider h1 {
     font-size: 19px;
     padding-top: 30px;
-}
-#slider .btn-white{
+  }
+
+  #slider .btn-white {
     margin-top: 20px;
-}
-slider.slider-small{
+  }
+
+  slider.slider-small {
     height: 100px;
-}
-slider.slider-small{
-  padding-top: 35px;
-}
+  }
+
+  slider.slider-small {
+    padding-top: 35px;
+  }
 }

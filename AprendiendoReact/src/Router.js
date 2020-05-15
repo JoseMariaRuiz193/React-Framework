@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import MiComponente from './components/MiComponente';
 import Error from './components/Error';
@@ -9,6 +9,9 @@ import Home from './components/Home';
 import Blog from './components/Blog';
 import Peliculas from './components/Peliculas'
 import Formulario from './components/Formulario';
+import Search from './components/Search';
+import Article from './components/Article';
+import CreateArticle from './components/CreateArticle';
 class Router extends Component {
 
     render() {
@@ -21,10 +24,18 @@ class Router extends Component {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/home" component={Home} />
                     <Route exact path="/blog" component={Blog} />
+                    <Route exact path="/blog/busqueda/:search" component={Search} />
+                    <Route exact path="/redirect/:search" render={
+                        (props) => {
+                            var search = props.match.params.search;
+                          return(  <Redirect to={'/blog/busqueda/' + search} />
+                          );
+                        }
+                    } />
+                    <Route exact path="/blog/articulo/:id" component={Article} />
+                    <Route exact path="/blog/crear" component={CreateArticle} />
                     <Route exact path="/formulario" component={Formulario} />
-                    <Route exact path="/peliculas" component={Peliculas}/>
-
-
+                    <Route exact path="/peliculas" component={Peliculas} />
                     <Route exact path="/segunda-ruta" component={MiComponente} />
                     <Route exact path="/pagina-1" render={() => (
                         <div>
